@@ -6,6 +6,7 @@
 let nums1 = [4];
 let nums2 = [];
 function News(nums1,nums2){
+    
     let g = nums1.concat(nums2);
     
     // console.log(g);
@@ -18,12 +19,16 @@ function News(nums1,nums2){
         return median.toFixed(5);
         //console.log(median.toFixed(5));
         }
-    else{
+    else if(g.length%2!=0){
         let mid = Math.ceil(g.length / 2);
         return g[mid-1].toFixed(5);
-        // console.log(g[mid-1].toFixed(5))
+        // console.log(g[mid-1].toFixed(5));
         
     }
+    else{
+        return "array doesnot have any elements or this is not an array";
+    }
+
 
 
 
